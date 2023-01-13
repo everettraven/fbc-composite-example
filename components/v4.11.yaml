@@ -1,0 +1,12 @@
+Schema: olm.semver
+GenerateMajorChannels: true
+GenerateMinorChannels: true
+Candidate:
+  Bundles:
+  - Image: docker.io/bpalmer/hello-kubernetes-operator-bundle:v0.0.1
+Fast:
+  Bundles:
+  - Image: docker.io/bpalmer/hello-kubernetes-operator-bundle:v0.0.2
+Stable:
+  Bundles:
+  - Image: docker.io/bpalmer/hello-kubernetes-operator-bundle:v0.0.3

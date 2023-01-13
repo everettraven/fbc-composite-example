@@ -1,0 +1,20 @@
+schema: olm.composite.catalogs
+catalogs:
+- name: v4.10
+  destination:
+    baseImage: quay.io/operator-framework/opm:v1.24
+    workingDir: /v4.10
+  builders:
+    - olm.veneer.basic
+- name: v4.11
+  destination:
+    baseImage: quay.io/operator-framework/opm:v1.25
+    workingDir: /v4.11
+  builders:
+    - olm.veneer.semver
+- name: v4.12
+  destination:
+    baseImage: quay.io/operator-framework/opm:v1.26
+    workingDir: /v4.12
+  builders:
+    - olm.veneer.raw

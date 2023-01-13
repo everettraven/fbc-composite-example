@@ -1,0 +1,32 @@
+schema: olm.composite
+components:
+- name: v4.10
+  destination:
+    path: catalogs/v4.10/my-package
+  strategy:
+    name: basic
+    veneer:
+      schema: "olm.veneer.basic"
+      config:
+        input: components/v4.10.yaml 
+        output: catalog.yaml
+- name: v4.11
+  destination:
+    path: catalogs/v4.11/my-package
+  strategy:
+    name: semver
+    veneer:
+      schema: "olm.veneer.semver"
+      config:
+        input: components/v4.11.yaml 
+        output: catalog.yaml
+- name: v4.12
+  destination:
+    path: catalogs/v4.12/my-package
+  strategy:
+    name: raw
+    veneer:
+      schema: "olm.veneer.raw"
+      config:
+        input: components/v4.12.yaml 
+        output: catalog.yaml

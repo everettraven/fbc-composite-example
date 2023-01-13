@@ -1,0 +1,23 @@
+---
+schema: olm.package
+name: hello-kubernetes-operator
+defaultChannel: stable
+---
+schema: olm.channel
+package: hello-kubernetes-operator
+name: stable
+entries:
+- name: hello-kubernetes-operator.v0.0.1
+- name: hello-kubernetes-operator.v0.0.2
+  replaces: example-operator.v0.0.1
+- name: hello-kubernetes-operator.v0.0.3
+  replaces: example-operator.v0.0.2
+---
+schema: olm.bundle
+image: docker.io/bpalmer/hello-kubernetes-operator-bundle:v0.0.1
+---
+schema: olm.bundle
+image: docker.io/bpalmer/hello-kubernetes-operator-bundle:v0.0.2
+---
+schema: olm.bundle
+image: docker.io/bpalmer/hello-kubernetes-operator-bundle:v0.0.3
