@@ -18,3 +18,9 @@ catalogs:
     workingDir: /v4.12
   builders:
     - olm.veneer.raw
+- name: v4.13
+  destination:
+    baseImage: quay.io/operator-framework/opm:v1.26
+    workingDir: /v4.13
+  builders:
+    - olm.veneer.custom

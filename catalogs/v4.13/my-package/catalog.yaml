@@ -1,17 +1,11 @@
 ---
 defaultChannel: preview
-name: webhook-operator
+name: webhook-operator-413
 schema: olm.package
----
-entries:
-- name: webhook-operator.v0.0.1
-name: preview
-package: webhook-operator
-schema: olm.channel
 ---
 image: quay.io/olmtest/webhook-operator-bundle:0.0.3
 name: webhook-operator.v0.0.1
-package: webhook-operator
+package: webhook-operator-413
 properties:
 - type: olm.gvk
   value:
@@ -25,7 +19,7 @@ properties:
     version: v2
 - type: olm.package
   value:
-    packageName: webhook-operator
+    packageName: webhook-operator-413
     version: 0.0.1
 - type: olm.bundle.object
   value:
@@ -44,3 +38,9 @@ relatedImages:
 - image: quay.io/olmtest/webhook-operator:0.0.3
   name: ""
 schema: olm.bundle
+---
+schema: olm.channel
+package: webhook-operator-413
+name: preview
+entries:
+  - name: webhook-operator.v0.0.1

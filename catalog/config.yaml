@@ -30,3 +30,15 @@ components:
       config:
         input: components/v4.12.yaml 
         output: catalog.yaml
+- name: v4.13
+  destination:
+    path: catalogs/v4.12/my-package
+  strategy:
+    name: custom
+    veneer:
+      schema: "olm.veneer.custom"
+      config:
+        command: bash
+        args:
+          - "-c"
+          - "cat components/v4.13.yaml > catalogs/v4.13/my-package/catalog.yaml"
