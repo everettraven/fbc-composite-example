@@ -3,6 +3,12 @@ defaultChannel: preview
 name: webhook-operator-413
 schema: olm.package
 ---
+entries:
+- name: webhook-operator.v0.0.1
+name: preview
+package: webhook-operator-413
+schema: olm.channel
+---
 image: quay.io/olmtest/webhook-operator-bundle:0.0.3
 name: webhook-operator.v0.0.1
 package: webhook-operator-413
@@ -38,9 +44,3 @@ relatedImages:
 - image: quay.io/olmtest/webhook-operator:0.0.3
   name: ""
 schema: olm.bundle
----
-schema: olm.channel
-package: webhook-operator-413
-name: preview
-entries:
-  - name: webhook-operator.v0.0.1
