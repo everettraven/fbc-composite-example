@@ -3,24 +3,24 @@ catalogs:
 - name: v4.10
   destination:
     baseImage: quay.io/operator-framework/opm:v1.24
-    workingDir: /v4.10
+    workingDir: catalogs/v4.10
   builders:
-    - olm.veneer.basic
+    - olm.builder.basic
 - name: v4.11
   destination:
     baseImage: quay.io/operator-framework/opm:v1.25
-    workingDir: /v4.11
+    workingDir: catalogs/v4.11
   builders:
-    - olm.veneer.semver
+    - olm.builder.semver
 - name: v4.12
   destination:
     baseImage: quay.io/operator-framework/opm:v1.26
-    workingDir: /v4.12
+    workingDir: catalogs/v4.12
   builders:
-    - olm.veneer.raw
+    - olm.builder.raw
 - name: v4.13
   destination:
     baseImage: quay.io/operator-framework/opm:v1.26
-    workingDir: /v4.13
+    workingDir: catalogs/v4.13
   builders:
-    - olm.veneer.custom
+    - olm.builder.custom
